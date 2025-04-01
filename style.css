@@ -73,6 +73,7 @@ body {
     align-items: center;
     height: 100vh; 
     background-color: #FAF4E5; 
+    overflow: hidden;
   }
   
   .mybutton {
