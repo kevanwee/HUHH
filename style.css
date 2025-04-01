@@ -124,8 +124,8 @@ body {
 
 .github-button {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
+    top: 20px; 
+    left: 20px; 
     background-color: #333; 
     color: #FAF4E5;
     font-family: 'Montserrat', sans-serif;
