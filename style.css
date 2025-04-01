@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF4E5; /* Light theme background */
+    color: #333332; /* Light theme text color */
+  }
+  
+  /* Preloader Styling */
+  .preloader {
+    background-color: #FAF4E5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .loader {
+    border: 16px solid #dbc1ac; /* Light grey */
+    border-top: 16px solid #967259; /* Pink */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .preloader-text {
+    font-family: "Lucida Console", monospace;
+    font-size: 16px;
+  }
+  
+  /* Ready Screen Styling */
+  .ready-screen {
+    background-color: #FAF4E5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ready-wrapper {
+    text-align: center;
+  }
+  
+  .ready-icon {
+    width: auto;
+  }
+  
+  .ready-text {
+  font-family:"lucida-console", monospace;
+  }
+
+  .hidden {
+  display:none}
+
+   /* i messed up the css for this sry T^T */
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    background-color: #FAF4E5; 
+  }
+  
+  .mybutton {
+    border-radius: 2px;
+    background: #967259;
+    border: none;
+    color: #FAF4E5;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .mybutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .mybutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .mybutton:hover span {
+    padding-right: 25px;
+  }
+  
+  .mybutton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .gif {
+    position: absolute;
+    width: auto; /* Width will be randomized */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
