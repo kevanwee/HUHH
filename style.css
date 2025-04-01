@@ -143,4 +143,37 @@ body {
     background-color: #555; 
     transform: scale(1.05);
   }
-  
+
+/* Constrain GIFs within their container */
+.gif {
+  position: absolute;
+  max-width: 100%; /* Prevent GIFs from exceeding container width */
+  max-height: 100%; /* Prevent GIFs from exceeding container height */
+  object-fit: contain; /* Ensure proper scaling */
+}
+
+/* Prevent body overflow */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure button does not cause layout issues */
+.mybutton {
+  display: inline-block;
+  max-width: 100%; /* Prevent button from growing too large */
+  word-wrap: break-word; /* Handle long text gracefully */
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+  .gif {
+    position: relative; /* Adjust positioning for smaller screens */
+    width: 80%; /* Scale down GIF size on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .mybutton {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
