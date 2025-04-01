@@ -1,5 +1,6 @@
 # HUHH
 Click <a href="https://www.youtube.com/shorts/KeEmAvuCdrA">here</a> for an in-depth explaination of how this code works!
+If you thought this was actually my portfolio and want to check it out... <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a>
 
 TLDR;
 
