@@ -6,6 +6,13 @@ body {
     background-color: #FAF4E5; /* Light theme background */
     color: #333332; /* Light theme text color */
   }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
   
   /* Preloader Styling */
   .preloader {
