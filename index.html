@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <p class="preloader-text" id="preloader-text">Tidying up room...(⊙_☉)</p>
+  </div>
+
+  <!-- Ready Screen -->
+  <div class="ready-screen hidden" id="ready-screen">
+    <div class="ready-wrapper">
+      <img src="./assets/box-icon.png" alt="Box Icon" class="ready-icon">
+      <p class="ready-text">Ready!<br>(• ω •`)</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container hidden" id="main-content">
+    <button class="mybutton" id="start-button">
+        <span>Enter now!</span>
+    </button>
+  </div>
+  <!-- Hidden audio element -->
+  <audio id="rickroll-audio" src="./assets/huhh.mp3" loop></audio>
+
+  <!-- JavaScript for prank functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const startButton = document.getElementById("start-button");
+      startButton.addEventListener("click", () => {
+        const audio = document.getElementById("rickroll-audio");
+        audio.play().catch((error) => {
+          console.error("Audio playback failed:", error);
+          alert("Failed to play audio. Please check your browser settings.");
+        });
+
+        const container = document.querySelector(".container");
+        container.innerHTML = `
+          <h1>hApPY aPrIl fOoL's</h1>
+        `;
+
+        setInterval(() => {
+          for (let i = 0; i < 5; i++) {
+            spawnGif();
+          }
+        }, 200);
+      });
+
+    });
+
+    function getRandomPosition() {
+      const x = Math.random() * window.innerWidth; // Random X position
+      const y = Math.random() * window.innerHeight; // Random Y position
+      return { x, y };
+    }
+
+    function spawnGif() {
+      const gif = document.createElement("img");
+
+      const gifSources = ["./assets/huhh.gif", "./assets/laughing-cat.gif"];
+      gif.src = gifSources[Math.floor(Math.random() * gifSources.length)];
+
+      gif.className = "gif";
+
+      const { x, y } = getRandomPosition();
+      gif.style.left = `${x}px`;
+      gif.style.top = `${y}px`;
+
+      const randomSize = Math.floor(Math.random() * (400 - 150 + 1)) + 150; 
+      gif.style.width = `${randomSize}px`;
+
+      document.body.appendChild(gif);
+
+      setTimeout(() => {
+        gif.remove();
+      }, 3000); 
+    }
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
